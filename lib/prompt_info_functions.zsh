@@ -26,8 +26,3 @@ function rvm_prompt_info() {
   echo "${ZSH_THEME_RVM_PROMPT_PREFIX:=(}${rvm_prompt}${ZSH_THEME_RVM_PROMPT_SUFFIX:=)}"
 }
 
-# use this to enable users to see their ruby version, no matter which
-# version management system they use
-function ruby_prompt_info() {
-  echo $(rvm_prompt_info || rbenv_prompt_info || chruby_prompt_info)
-}
